@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="Mheader">
+
+    <nav>
+        <img src="./img/logo.png" class="logo"  width="12%" height="12%">
+    
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#login1">Login</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <img src="./img/menu.png" class="menu" width="2%" onclick="toggleMenu()">
+
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="./img/user.png" alt="user" width="20%">
+                    <h3>User 1234</h3>
+                </div>
+                <hr>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="./img/profile.png" width="10%">
+                    <p>Your Profile</p>
+                    <span>></span>
+                </a>
+
+                <a href="./subject/chemistry.html" target="_blank" class="sub-menu-link">
+                    <img src="./img/chemistry.png" width="10%">
+                    <p>Chemistry</p>
+                    <span>></span>
+                </a>
+
+                <a href="./subject/physics.html" target="_blank" class="sub-menu-link">
+                    <img src="./img/physics.png" width="10%">
+                    <p>Physics</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="./img/help.png" width="10%">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <img src="./img/logout.png" width="10%">
+                    <p>Logout</p>
+                    <span>></span>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+ 
+  
+
+</div>
+<script>
+    let subMenu=document.getElementById("subMenu");
+
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+    }
+</script>
+
+<section class="home" id="home">
+
+    <div class="content">  
+        <h1>WITS ACADEMY</h1>
+        <h3 class="anim">All needs for Chemistry and Physics Students</h3><br>
+
+        <div class="butn anim">
+            <a href="#login1">Register Now</a>
+
+        </div>
+        <img src="./img/feature.png" class="feature-img anim">
+    </div>
+
+</section>
+
+<section class="about" id="about">
+    <br><br><br>
+    <h1>About us</h1>
+
+    <br>
+
+    <div class="about-contain">
+
+        <div class="about-image">
+            <img src="./img/about.jpg">
+        </div>
+
+        <div class="about-content">
+            <h3>What makes us special?</h3>
+            <p>Wits Academy is the best Chemistry and Physics Learning institute of Sri Lanka. </p>
+            <p>We are providing all needs for Advanced Level Physics and Chemistry Students in one place.</p>
+            <a href="#" class="butn">Learn more</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="services" id="services">
+    <br><br><br>
+    
+    <h1>Our Services</h1>
+    <br>
+
+    <div class="table1">      
+        <table border="0" align="center">
+            <tr>
+                <td>
+                    <div class="box-1">
+                    <h2><a href="./subject/chemistry.html" target="_blank">Chemistry</a></h2>
+                    
+                    </div>
+                </td>
+                <td width="100px">
+
+                </td>
+                
+                <td>
+                    <div class="box-1">
+                    <h2><a href="./subject/physics.html">Physics</a></h2>
+                    
+                    </div>
+                </td>
+        </tr>
+        </table>
+    </div> 
+</section>
+
+<section class="login1" id="login1">
+    <br><br><br>
+    <h1>Join With Us</h1>
+
+    <div class="pic-box">
+        <img src="./img/login.png" width="690px" height="460px">
+    </div>
+
+    <div class="reg-box">
+        <div class="butn-box">
+            <div id="r-btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Login</button>
+            <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+        <div class="social-ic">
+            <a href="https://www.facebook.com/" target="_blank">
+            <img src="./img/fb.png"></a>
+            <a href="https://accounts.google.com " target="_blank">
+            <img src="./img/gmail.png"></a>
+            <a href="https://www.linkedin.com/login" target="_blank">
+            <img src="./img/li.png"></a>
+        </div>
+        <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User ID" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="sumbit" class="submit-btn">Login</button>
+        </form>
+
+        <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="User ID" required>
+            <input type="text" class="input-field" placeholder="Enter Email" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+            <button type="sumbit" class="submit-btn">Register</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    var x=document.getElementById("login");
+    var y=document.getElementById("register");
+    var z=document.getElementById("r-btn");
+
+    function register(){
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="110px";
+    }
+
+    function login(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0";
+    }
+ </script>
+
+ <section class="contact" id="contact">
+    <br><br><br>
+    <form action="">
+        <div class="c-title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="half">
+            <div class="c-item">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="c-item">
+                <label for="email">E-mail</label>
+                <input type="text" id="name">
+            </div>
+        </div>
+        <div class="full">
+            <label for="message">Message</label>
+            <textarea name="" id="message"></textarea>
+        </div>
+        <div class="c-action">
+            <input type="submit" value="Send Message">
+            <input type="reset" value="Reset">
+        </div>
+        <div class="c-icons">
+            <a href="" class="fa fa-twitter"></a>
+            <a href="" class="fa fa-facebook"></a>
+            <a href="" class="fa fa-instagram"></a>
+            <a href="" class="fa fa-youtube-play"></a>
+        </div>
+    </form>
+ </section>
+ <br><br><br><br>
+ <footer>
+    <section type="footer1" id="footer1">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="f-icon">
+            <li><a href="" class="fa fa-youtube"></a></li>
+            <li><a href="" class="fa fa-facebook-square"></a></li>
+            <li><a href="" class="fa fa-twitter"></a></li>
+            <li><a href="" class="fa fa-instagram"></a></li>
+            <li><a href="" class="fa fa-linkedin-square"></a></li>
+            <li><a href="" class="fa fa-whatsapp"></a></li>
+        </ul>
+
+        <ul class="f-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#login1">Login</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <p>Copyright © 2022 Wits Academy | All Rights Reserved</p>
+    </section>
+
+</footer> 	
+   
+
+
+
+
+
+
+
+    
+</body>
+</html>
